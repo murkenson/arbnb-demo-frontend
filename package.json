@@ -1,0 +1,13 @@
+{
+  "name": "airbnb-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/murkenson/arbnb-demo-frontend.git",
+  "author": "Murad Arfanyan <smurkensons@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "normalize": "^0.3.1",
+    "react": "^16.0.0",
+    "styled-components": "^2.2.3"
+  }
+}
