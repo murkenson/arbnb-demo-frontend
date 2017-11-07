@@ -19,6 +19,7 @@ const Col = styled.div`
 `;
 
 const Img = styled.img`
+  display: block;
   width: 147px;
   height: 220px;
 `;

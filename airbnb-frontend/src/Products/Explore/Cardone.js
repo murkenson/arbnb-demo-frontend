@@ -4,7 +4,7 @@ import home from "./home.png";
 import restrant from "./restrant.png";
 import exper from "./exper.png";
 
-const Container = styled.div`heignt: 130px;`;
+const Container = styled.div`heignt: 155px;`;
 
 const Row = styled.div`display: flex;`;
 const Col1 = styled.div`
@@ -20,11 +20,7 @@ const Card = styled.div`
   align-items: center;
   border-radius: 4px;
 `;
-const Title = styled.h2`
-  color: rgba(56, 56, 56, 1);
-  margin-top: 50px;
-  font-family: CircularBold;
-`;
+
 const Text = styled.p`
   font-weight: bold;
   margin-left: 25px;
@@ -32,6 +28,7 @@ const Text = styled.p`
 `;
 
 const Img = styled.img`
+  display: block;
   width: 96px;
   height: 72px;
 `;

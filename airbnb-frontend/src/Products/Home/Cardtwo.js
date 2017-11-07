@@ -15,6 +15,7 @@ const Col = styled.div`
   box-sizing: border-box;
 `;
 const Img = styled.img`
+  display: block;
   width: 310px;
   height: 204px;
 `;

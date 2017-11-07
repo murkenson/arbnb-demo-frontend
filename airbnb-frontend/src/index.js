@@ -5,5 +5,7 @@ import App from "./App";
 
 import registerServiceWorker from "./registerServiceWorker";
 
+import "./fonts/index.css";
+
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

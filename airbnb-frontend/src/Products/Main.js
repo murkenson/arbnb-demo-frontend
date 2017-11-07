@@ -5,6 +5,7 @@ import Cardone from "./Explore/Cardone";
 import Cardtwo from "./Home/Cardtwo";
 import Cardthr from "./PopReservation/Cardthr";
 import Cardfour from "./Destination/Cardfour";
+import RightBotton from "./RightBotton.png";
 
 const AppMain = styled.main`
   position: relative;
@@ -20,12 +21,18 @@ const Title = styled.h2`
   font-family: CircularBold;
 `;
 
+const SeeAll = styled.p`
+  padding-top: 20px;
+  font-size: 14px;
+`;
+
 export default function() {
   return (
     <AppMain>
       <Title>Explore Airbnb</Title>
       <Cardone />
       <Title>Experiances</Title>
+      <SeeAll>See all</SeeAll>
       <Card />
       <Title>Homes</Title>
       <Cardtwo />

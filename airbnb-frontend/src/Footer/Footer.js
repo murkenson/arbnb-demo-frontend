@@ -1,38 +1,30 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import ArrownDown from "./ArrownDown.png";
 
 const AppFooter = styled.footer`
   position: relative;
   width: 100%;
   height: auto;
   border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   display: block;
   background-color: #ffffff;
   margin-top: 60px;
   padding: 60px 0;
 `;
-const Col1 = styled.div`
-  flex-basis: 25%;
+
+const Col1 = styled.div`flex-basis: 8.3333%;`;
+const Col2 = styled.div`flex-basis: 58.3333%;`;
+const Col3 = styled.div`
+  flex-basis: 33.3333%;
   padding-left: 81px;
   box-sizing: border-box;
 `;
+
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-`;
-
-const Input = styled.input`
-  color: #383838;
-  background-repeat: no-repeat;
-  background-position: 15px;
-  padding: 0.5em;
-  margin: 0.5em;
-  padding-left: 16px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
-  width: 229px;
-  height: 48px;
-  font-size: 24px;
 `;
 
 const NavLinks = styled.nav`
@@ -55,6 +47,20 @@ const Title = styled.h3`
   line-height: 0.875rem;
 `;
 
+const Select = styled.select`
+  color: #383838;
+  background-image: url("{ArrownDown}");
+  background-repeat: no-repeat;
+  background-position: 15px;
+  width: 229px;
+  height: 48px;
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  border-radius: 4px;
+  appearance: none;
+`;
+
+const OptionSel = styled.option``;
+
 export default function() {
   return (
     <AppFooter>
@@ -62,8 +68,16 @@ export default function() {
         <NavLinks>
           <div>
             <Col1 className="col-1">
-              <Input placeholder="English" type="text" />
-              <Input placeholder="United States Dollars" type="text" />
+              <Select>
+                <OptionSel>English</OptionSel>
+                <OptionSel>Russian</OptionSel>
+              </Select>
+              <br />
+              <Select>
+                <OptionSel>Unated States Dollar</OptionSel>
+                <OptionSel>Russian Ruble</OptionSel>
+                <OptionSel>Ukrainian Hrivna</OptionSel>
+              </Select>
             </Col1>
           </div>
         </NavLinks>

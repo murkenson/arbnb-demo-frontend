@@ -8,15 +8,16 @@ import Seaprice from "./Seaprice.png";
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
+  padding-left: 7.2%;
+  padding-right: 7.2%;
 `;
 const Col = styled.div`
   flex-basis: 25%;
-  padding-left: 81px;
-  padding-right: 81px;
   box-sizing: border-box;
 `;
 
 const Img = styled.img`
+  display: block;
   width: 229px;
   height: 164px;
 `;
