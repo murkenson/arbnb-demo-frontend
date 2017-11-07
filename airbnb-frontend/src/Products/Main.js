@@ -10,20 +10,28 @@ const AppMain = styled.main`
   position: relative;
   width: 100%;
   height: auto;
+  padding-left: 81px;
+  padding-right: 77px;
+`;
+
+const Title = styled.h2`
+  color: rgba(56, 56, 56, 1);
+  margin-top: 50px;
+  font-family: CircularBold;
 `;
 
 export default function() {
   return (
     <AppMain>
-      <h3>Explore Airbnb</h3>
+      <Title>Explore Airbnb</Title>
       <Cardone />
-      <h3>Experiances</h3>
+      <Title>Experiances</Title>
       <Card />
-      <h3>Homes</h3>
+      <Title>Homes</Title>
       <Cardtwo />
-      <h3>Popular reservations around the world</h3>
+      <Title>Popular reservations around the world</Title>
       <Cardthr />
-      <h3>Featured destinations</h3>
+      <Title>Featured destinations</Title>
       <Cardfour />
     </AppMain>
   );

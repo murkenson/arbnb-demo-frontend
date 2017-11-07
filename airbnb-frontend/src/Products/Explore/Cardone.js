@@ -40,7 +40,6 @@ class Cardone extends React.Component {
   render() {
     return (
       <Container className="exploreContainer">
-        <Title>Explore Airbnb</Title>
         <Row className="rowExplore">
           <Col1 className="col1">
             <Card>

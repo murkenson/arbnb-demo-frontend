@@ -1,12 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "./logo.svg";
+import search from "./Search.svg";
 import styled from "styled-components";
-import Search from "./Path.png";
+
+const Search = styled.img``;
+
+const AppHeader = styled.header`
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  display: block;
+  background-color: #ffffff;
+  margin-top: 60px;
+  padding: 60px 0;
+`;
 
 const Input = styled.input`
-  background-image: url({Search});
+  background-image: url(${Search});
+
   background-repeat: no-repeat;
-  text-indent: 20px;
   background-position: 15px;
   padding: 0.5em;
   margin: 0.5em;
@@ -27,9 +40,9 @@ const Row = styled.div`
   margit-bottom: 20px;
 `;
 const Col1 = styled.div`flex-basis: 8.3333%;`;
-const Col2 = styled.div`flex-basis: 58.3333%;`;
-const Col3 = styled.div`
-  flex-basis: 33.3333%;
+const Col5 = styled.div`flex-basis: 58.3333%;`;
+const Col6 = styled.div`
+  flex-basis: 33.3333%
   list-style: none;
   margin: 0;
 `;
@@ -43,35 +56,48 @@ const Ul = styled.ul`
   padding: 0;
   padding: 15px;
 `;
-const Link = styled.li`
+const Li = styled.li`
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+`;
+const A = styled.a`
   text-decoration: none;
   font-size: 14px;
-  color: #383838;
 `;
-
 export default function() {
   return (
-    <div className="main">
-      <div className="headerContainer">
-        <header className="App-header">
-          <Row className="rowHeader">
-            <Col1 className="col-1">
-              <ImgLogo src={logo} alt="logo" />
-            </Col1>
-            <Col2 className="col-2">
-              <Input placeholder="Try &quot;Miami&quot;" type="text" />
-            </Col2>
-            <Col3>
-              <Ul className="col-3">
-                <Link href="#">Become a host</Link>
-                <Link href="#">Become a host</Link>
-                <Link href="#">Become a host</Link>
-                <Link href="#">Become a host</Link>
-              </Ul>
-            </Col3>
-          </Row>
-        </header>
+    <AppHeader>
+      <div className="main">
+        <div className="headerContainer">
+          <header className="App-header">
+            <Row className="rowHeader">
+              <Col1 className="col-1">
+                <ImgLogo src={logo} alt="logo" />
+              </Col1>
+              <Col5 className="col-5">
+                <Input placeholder="Try &quot;Miami&quot;" type="text" />
+              </Col5>
+              <Col6>
+                <Ul className="col-6">
+                  <Li>
+                    <A href="#">Become a host</A>
+                  </Li>
+                  <Li>
+                    <A href="#">Help</A>
+                  </Li>
+                  <Li>
+                    <A href="#">Sign Up</A>
+                  </Li>
+                  <Li>
+                    <A href="#">Log In</A>
+                  </Li>
+                </Ul>
+              </Col6>
+            </Row>
+          </header>
+        </div>
       </div>
-    </div>
+    </AppHeader>
   );
 }
