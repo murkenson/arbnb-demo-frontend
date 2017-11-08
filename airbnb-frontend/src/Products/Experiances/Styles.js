@@ -1,10 +1,5 @@
 import styled from "styled-components";
 
-export const Card = styled.li`
-  flex-basis: 23.27235%;
-  display: flex;
-`;
-
 export const Price = styled.span`
   margin-top: 8px;
   font-family: "Circular-Bold", sans-serif;
@@ -12,7 +7,10 @@ export const Price = styled.span`
   line-height: 18px;
   color: #383838;
 `;
-
+export const Card = styled.li`
+  flex-basis: 23.27235%;
+  display: flex;
+`;
 export const Img = styled.img`
   width: 229px;
   height: 346.88px;
@@ -36,7 +34,7 @@ export const Title = styled.h3`
   font-size: 15px;
   line-height: 18px;
 `;
-export const Ratio = styled.div`
+export const RatingStar = styled.div`
   margin-top: 7px;
   display: flex;
   align-items: baseline;

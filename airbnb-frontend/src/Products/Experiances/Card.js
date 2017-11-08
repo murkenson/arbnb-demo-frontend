@@ -6,10 +6,21 @@ import {
   Link,
   PriceInfo,
   Title,
-  Ratio,
+  RatingStar,
   Review,
   Price
 } from "./Styles";
+
+import StarIcon from "../Star.svg";
+
+const Star = styled.div`
+  width: 12px;
+  height: 13px;
+  margin-right: 4px;
+  background-image: url(${StarIcon});
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
 
 export default function(props) {
   return (
@@ -20,9 +31,14 @@ export default function(props) {
           <Price>{props.price}</Price>
           <Title>{props.title}</Title>
         </PriceInfo>
-        <Ratio>
+        <RatingStar>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
           <Review>{props.review}</Review>
-        </Ratio>
+        </RatingStar>
       </Link>
     </Card>
   );
