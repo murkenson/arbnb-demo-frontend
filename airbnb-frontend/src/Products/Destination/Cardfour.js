@@ -7,15 +7,21 @@ import Seoul from "./Seoul.png";
 import CapeTown from "./CapeTown.png";
 import Miami from "./Miami.png";
 
+const Container = styled.div`
+  width: 1108px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  padding-left: 7.2%;
-  padding-right: 7.2%;
 `;
 const Col = styled.div`
   flex-basis: 16.6666666667%;
   box-sizing: border-box;
+  padding-left: 8px;
+  padding-right: 8px;
 `;
 
 const Img = styled.img`
@@ -24,47 +30,71 @@ const Img = styled.img`
   height: 220px;
 `;
 
+const DivText = styled.text`margin-top: 8px;`;
+
+const StyleSpa = styled.span`
+  font-size: 15px;
+  font-family: "CircularAir" sans-serif;
+  font-weight: bold;
+  color: #383838;
+  line-height: 18px;
+`;
+
 class Cardfour extends React.Component {
   render() {
     return (
-      <Row>
-        <Col>
-          <div>
-            <Img src={Paris} alt="Card" />
-            <p>Paris</p>
-          </div>
-        </Col>
-        <Col>
-          <div>
-            <Img src={Miami} alt="Card" />
-            <p>Miami</p>
-          </div>
-        </Col>
-        <Col>
-          <div>
-            <Img src={Tokyo} alt="Card" />
-            <p>Tokyo</p>
-          </div>
-        </Col>
-        <Col>
-          <div>
-            <Img src={CapeTown} alt="Card" />
-            <p>Cape town</p>
-          </div>
-        </Col>
-        <Col>
-          <div>
-            <Img src={Seoul} alt="Card" />
-            <p>Seoul</p>
-          </div>
-        </Col>
-        <Col>
-          <div>
-            <Img src={LA} alt="Card" />
-            <p>Los Angeles</p>
-          </div>
-        </Col>
-      </Row>
+      <Container>
+        <Row>
+          <Col>
+            <div>
+              <Img src={Paris} alt="Card" />
+              <DivText>
+                <StyleSpa>Paris</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <Img src={Miami} alt="Card" />
+              <DivText>
+                <StyleSpa>Miami</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <Img src={Tokyo} alt="Card" />
+              <DivText>
+                <StyleSpa>Tokyo</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <Img src={CapeTown} alt="Card" />
+              <DivText>
+                <StyleSpa>Cape town</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <Img src={Seoul} alt="Card" />
+              <DivText>
+                <StyleSpa>Seoul</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <Img src={LA} alt="Card" />
+              <DivText>
+                <StyleSpa>Los Angeles</StyleSpa>
+              </DivText>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     );
   }
 }

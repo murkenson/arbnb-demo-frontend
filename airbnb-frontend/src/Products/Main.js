@@ -13,12 +13,19 @@ const AppMain = styled.main`
   height: auto;
   padding-left: 81px;
   padding-right: 77px;
+  font-size: 32px;
+  line-height: 34px;
 `;
 
 const Title = styled.h2`
   color: rgba(56, 56, 56, 1);
   margin-top: 50px;
-  font-family: CircularBold;
+  font-weight: bold;
+  font-family: "CircularAir" sans-serif;
+  font-weight: bold;
+  color: #383838;
+  line-height: 34px;
+  font-size: 32px;
 `;
 
 const SeeAll = styled.p`
