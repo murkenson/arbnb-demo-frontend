@@ -2,16 +2,19 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import ArrownDown from "./ArrownDown.png";
 
-const AppFooter = styled.footer`
-  position: relative;
+const Footer = styled.footer`
   width: 100%;
-  height: auto;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  display: block;
-  background-color: #ffffff;
-  margin-top: 60px;
-  padding: 60px 0;
+  padding: 48px 0;
+  box-shadow: 0px 0px 1px rgba(72, 72, 72, 0.3);
+  line-height: 24px;
+`;
+const Wrapper = styled.div`
+  width: 86.032028%;
+  margin: 0 auto;
+`;
+const FooterWrapper = Wrapper.extend`
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Col1 = styled.div`flex-basis: 8.3333%;`;
@@ -41,45 +44,49 @@ const Link = styled.a`
 
 const Title = styled.h3`
   margin-top: 0;
-  margin-bottom: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  line-height: 0.875rem;
+  font-family: CircularBold, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #383838;
 `;
 
-const Select = styled.select`
-  color: #383838;
-  background-image: url("{ArrownDown}");
-  background-repeat: no-repeat;
-  background-position: 15px;
-  width: 229px;
-  height: 48px;
+const Settings = styled.div`flex-basis: 23.27235%;`;
+
+const Form = styled.form`
+  margin-bottom: 16px;
+  margin-left: 51px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+`;
+const DropDown = styled.select`
+  width: 100%;
+  padding: 12px 16px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  appearance: none;
+  font-family: CircularLight, Helvetica, sans-serif;
+  color: #383838;
+  font-size: 18px;
+  line-height: 21px;
 `;
-
-const OptionSel = styled.option``;
 
 export default function() {
   return (
-    <AppFooter>
-      <Row>
+    <Footer>
+      <FooterWrapper>
         <NavLinks>
-          <div>
-            <Col1 className="col-1">
-              <Select>
-                <OptionSel>English</OptionSel>
-                <OptionSel>Russian</OptionSel>
-              </Select>
-              <br />
-              <Select>
-                <OptionSel>Unated States Dollar</OptionSel>
-                <OptionSel>Russian Ruble</OptionSel>
-                <OptionSel>Ukrainian Hrivna</OptionSel>
-              </Select>
-            </Col1>
-          </div>
+          <Settings>
+            <Form>
+              <DropDown>
+                <option value="">English</option>
+              </DropDown>
+            </Form>
+            <Form>
+              <DropDown>
+                <option value="">United State Dollars</option>
+              </DropDown>
+            </Form>
+          </Settings>
         </NavLinks>
         <NavLinks>
           <Col1 className="col-2">
@@ -113,7 +120,7 @@ export default function() {
             <Link href="#">Community Center</Link>
           </Col1>
         </NavLinks>
-      </Row>
-    </AppFooter>
+      </FooterWrapper>
+    </Footer>
   );
 }

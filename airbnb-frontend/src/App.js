@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import logo from "./Header/logo.svg";
-import Header from "./Header/Header";
-import Main from "./Products/Main";
-import Footer from "./Footer/Footer";
+import logo from "./Assets/logo.svg";
+import Header from "./Header/";
+import Main from "./Products/";
+import Footer from "./Footer/";
 
 class App extends Component {
   render() {

@@ -1,50 +1,43 @@
 import React from "react";
-import logo from "./logo.svg";
 import styled from "styled-components";
-import search from "./Search.png";
+import searchicon from "../Assets/Search.svg";
 
-const InputSmt = styled.input`
-  background-image: url(${search});
-  background-repeat: no-repeat;
-  background-position: 15px;
-  padding: 0.5em;
-  margin: 0.5em;
-  padding-left: 50px;
-  border: 1px solid rgba(72, 72, 72, 0.2);
-  border-radius: 4px;
+const Form = styled.form`
+  display: inline-block;
+  margin-left: 51px;
   width: 392px;
-  font-size: 24px;
+  position: relative;
 `;
-/**const InputForm = styled.input`
-  max-width: 390px;
+const Search = styled.input`
   width: 100%;
-  display: flex;
-  align-items: center;
+  padding: 12px 53px;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  color: #fff;
-  margin: 16px 188px 16px 0;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-`;**/
-const InputMenu = styled.div`
-  margin: 12px 17px 12px 16px;
-  line-height: 20px;
-  display: flex;
-`;
-const InputText = styled.p`
+  box-shadow: 0px 0px 2px rgba(72, 72, 72, 0.08);
+  font-family: CircularBook, Helvetica, sans-serif;
   color: #383838;
-  margin: 0;
   font-size: 16px;
-  line-height: 24px;
-  opacity: 0.7;
+`;
+const SearchIcon = styled.button`
+  position: absolute;
+  border: none;
+  width: 20px;
+  height: 20px;
+  right: 356px;
+  top: 12px;
+  background-color: transparent;
+  background-image: url(${searchicon});
+  backround-repeat: no-repeat;
+  background-size: cover;
 `;
 
 class InputSearch extends React.Component {
   render() {
     return (
-      <div>
-        <InputSmt placeholder="Try &quot;Miami&quot;" type="text" />
-      </div>
+      <Form>
+        <Search type="search" placeholder="Try Miami" />
+        <SearchIcon type="submit" />
+      </Form>
     );
   }
 }
