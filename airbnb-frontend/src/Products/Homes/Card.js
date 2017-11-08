@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Card, Img, Link, PriceInfo, Title, Ratio, Review } from "./Styles";
+import { Img, Link, PriceInfo, Title, Ratio, Review } from "./Styles";
+import { Card } from "./Styles";
 
 const Price = styled.span`
   margin-top: 8px;

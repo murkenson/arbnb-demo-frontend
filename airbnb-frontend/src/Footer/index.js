@@ -5,7 +5,7 @@ import ArrownDown from "./ArrownDown.png";
 const Footer = styled.footer`
   width: 100%;
   padding: 48px 0;
-  box-shadow: 0px 0px 1px rgba(72, 72, 72, 0.3);
+  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.3);
   line-height: 24px;
 `;
 const Wrapper = styled.div`
@@ -52,22 +52,37 @@ const Title = styled.h3`
 
 const Settings = styled.div`flex-basis: 23.27235%;`;
 
-const Form = styled.form`
-  margin-bottom: 16px;
-  margin-left: 51px;
-  display: inline-block;
-  width: 100%;
+const DropDown = styled.div`
   position: relative;
-`;
-const DropDown = styled.select`
-  width: 100%;
-  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #ffffff;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
-  font-family: CircularLight, Helvetica, sans-serif;
-  color: #383838;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 9px;
+    top: 20px;
+    right: 16px;
+    background-image: url(${ArrownDown});
+    background-position: 0 0;
+    background-size: cover;
+  }
+`;
+const DropDownSelect = styled.select`
+  border: none;
+  width: 100%;
+  padding: 12px 50px 12px 16px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  font-family: "Circular-Air", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
   font-size: 18px;
-  line-height: 21px;
+  color: #383838;
 `;
 
 export default function() {
@@ -76,16 +91,21 @@ export default function() {
       <FooterWrapper>
         <NavLinks>
           <Settings>
-            <Form>
-              <DropDown>
-                <option value="">English</option>
-              </DropDown>
-            </Form>
-            <Form>
-              <DropDown>
+            <DropDown>
+              <DropDownSelect name="lang" id="lang">
+                <option value="eng">English</option>
+                <option value="rus">Russian</option>
+                <option value="isp">Ispanion</option>
+                <option value="gr,m">German</option>
+              </DropDownSelect>
+            </DropDown>
+            <DropDown>
+              <DropDownSelect>
                 <option value="">United State Dollars</option>
-              </DropDown>
-            </Form>
+                <option value="">Roubles</option>
+                <option value="">Evro</option>
+              </DropDownSelect>
+            </DropDown>
           </Settings>
         </NavLinks>
         <NavLinks>

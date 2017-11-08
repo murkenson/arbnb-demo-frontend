@@ -19,7 +19,7 @@ const List = styled.ul`
 `;
 const SectionTitle = styled.h2`
   margin-top: 48px;
-  font-family: "CircularBold", sans-serif;
+  font-family: "Circular-Bold", sans-serif;
   font-size: 32px;
   line-height: 34px;
   color: #383838;
