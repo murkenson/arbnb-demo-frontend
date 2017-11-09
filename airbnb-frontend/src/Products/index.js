@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import Card from "./Experiances/";
-import Cardone from "./Explore/";
-import Cardtwo from "./Homes/";
-import Cardthr from "./PopReservation/";
-import Cardfour from "./Destination/";
+import Explore from "./Explore/";
+import Experiances from "./Experiances/";
+import Homes from "./Homes/";
+import PopReservation from "./PopReservation/";
+import Destination from "./Destination/";
 
 const AppMain = styled.main`
   position: relative;
@@ -19,11 +19,11 @@ const AppMain = styled.main`
 export default function() {
   return (
     <AppMain>
-      <Cardone />
-      <Card />
-      <Cardtwo />
-      <Cardthr />
-      <Cardfour />
+      <Explore />
+      <Experiances />
+      <Homes />
+      <PopReservation />
+      <Destination />
     </AppMain>
   );
 }

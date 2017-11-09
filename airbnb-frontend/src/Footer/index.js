@@ -4,8 +4,8 @@ import ArrownDown from "./ArrownDown.png";
 
 const Footer = styled.footer`
   width: 100%;
-  padding: 48px 0;
-  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.3);
+  padding: 48px;
+  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
   line-height: 24px;
 `;
 const Wrapper = styled.div`
@@ -96,7 +96,7 @@ export default function() {
                 <option value="eng">English</option>
                 <option value="rus">Russian</option>
                 <option value="isp">Ispanion</option>
-                <option value="gr,m">German</option>
+                <option value="grm">German</option>
               </DropDownSelect>
             </DropDown>
             <DropDown>

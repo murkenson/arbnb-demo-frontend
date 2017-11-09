@@ -10,8 +10,8 @@ export const Card = styled.li`
 `;
 
 export const Img = styled.img`
-  width: 100%;
-  height: auto;
+  width: 310px;
+  height: 204px;
 `;
 export const Link = styled.a`
   text-decoration: none;

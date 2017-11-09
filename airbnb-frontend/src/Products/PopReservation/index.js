@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import SeeAllBtn from "../SeeAllBtn";
 
 const CardArrayImg = [
   require("./img/Card1.png"),
@@ -27,6 +28,7 @@ export default function() {
   return (
     <section>
       <SectionTitle>Popular reservations around the world</SectionTitle>
+      <SeeAllBtn />
       <List>
         <Card
           title="Chumley’s"

@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import SeeAllBtn from "../SeeAllBtn";
+import NextBtn from "../NextBtn";
 
 const CardArrayImg = [
   require("./img/Card1.png"),
@@ -27,7 +29,8 @@ const SectionTitle = styled.h2`
 export default function() {
   return (
     <section>
-      <SectionTitle>Experiences</SectionTitle>
+      <SectionTitle>Experiences</SectionTitle> <NextBtn />
+      <SeeAllBtn />
       <List>
         <Card
           image={CardArrayImg[0]}
