@@ -17,6 +17,7 @@ const List = styled.ul`
   list-style: none;
   padding: 0;
 `;
+
 const SectionTitle = styled.h2`
   margin-top: 48px;
   font-family: CircularBold, Helvetica, sans-serif;

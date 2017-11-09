@@ -7,7 +7,7 @@ const CardArrayImg = [
   require("./img/Card1.png"),
   require("./img/Card2.png"),
   require("./img/Card3.png"),
-  require("./img/Card3.png")
+  require("./img/Card4.png")
 ];
 
 const SectionTitle = styled.h2`padding-top: 48px;`;

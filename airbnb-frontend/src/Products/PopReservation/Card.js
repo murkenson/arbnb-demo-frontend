@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { PriseLight } from "../CommonStyles";
 
-const Card = styled.li`
+export const Card = styled.li`
   flex-basis: 23.27235%;
   display: flex;
 `;
 
 const Img = styled.img`
-  width: 229px;
-  height: 164px;
+  width: 100%;
+  height: auto;
 `;
+
 const WrapLink = styled.a`
   display: flex;
   flex-wrap: wrap;
@@ -42,7 +43,7 @@ export default function(props) {
   return (
     <Card>
       <WrapLink href="">
-        <Img src={props.image} alt="Home" />
+        <Img src={props.image} alt="PopReservation" />
         <Type>{props.type}</Type>
         <Title>{props.title}</Title>
         <PriseLight>{props.prising}</PriseLight>

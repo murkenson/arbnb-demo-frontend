@@ -3,18 +3,13 @@ import styled from "styled-components";
 import StarIcon from "../Star.svg";
 import { PriceBold, Star } from "../CommonStyles";
 
-const Wrapper = styled.div`
-  width: 86.032028%;
-  margin: 0 auto;
-`;
-
 const CardLi = styled.li`
   flex-basis: 31.504%;
   display: flex;
 `;
 const Img = styled.img`
-  width: 310px;
-  height: 204px;
+  width: 100%;
+  height: auto;
 `;
 const WrapLink = styled.a`
   text-decoration: none;
@@ -31,10 +26,10 @@ const PriceInfo = styled.div`
 const Title = styled.h3`
   margin: 8px 0px 0px 8px;
   display: inline;
-  font-family: "Circular-Light", sans-serif;
   font-weight: bold;
   font-size: 15px;
   line-height: 18px;
+  font-family: "Circular-Light", sans-serif;
 `;
 
 const Rating = styled.div`
@@ -52,24 +47,22 @@ const Review = styled.span`
 
 export default function(props) {
   return (
-    <Wrapper>
-      <CardLi>
-        <WrapLink href="">
-          <Img src={props.image} alt="Home" />
-          <PriceInfo>
-            <PriceBold>{props.price}</PriceBold>
-            <Title>{props.title}</Title>
-          </PriceInfo>
-          <Rating>
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Review>{props.review}</Review>
-          </Rating>
-        </WrapLink>
-      </CardLi>
-    </Wrapper>
+    <CardLi>
+      <WrapLink href="">
+        <Img src={props.image} alt="Home" width="310" height="264" />
+        <PriceInfo>
+          <PriceBold>{props.price}</PriceBold>
+          <Title>{props.title}</Title>
+        </PriceInfo>
+        <Rating>
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Star />
+          <Review>{props.review}</Review>
+        </Rating>
+      </WrapLink>
+    </CardLi>
   );
 }

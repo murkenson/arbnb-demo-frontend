@@ -7,10 +7,12 @@ const Card = styled.li`
   flex-basis: 23.27235%;
   display: flex;
 `;
-const Img = styled.img`
-  width: 229px;
-  height: 346.88px;
+
+export const Img = styled.img`
+  width: 100%;
+  height: auto;
 `;
+
 const Link = styled.a`
   text-decoration: none;
   display: flex;
@@ -47,7 +49,7 @@ export default function(props) {
   return (
     <Card>
       <Link href="">
-        <Img src={props.image} alt="Home" />
+        <Img src={props.image} alt="Experiance" width="229" height="346" />
         <PriceInfo>
           <PriceBold>{props.price}</PriceBold>
           <Title>{props.title}</Title>
