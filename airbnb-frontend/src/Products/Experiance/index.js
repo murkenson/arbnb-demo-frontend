@@ -17,7 +17,7 @@ export default function() {
     <Container>
       <Row>
         <Column size="11">
-          <Title>Popular reservations around the world</Title>
+          <Title>Experiences</Title>
         </Column>
         <Column>
           <SeeAllBtn />
@@ -27,41 +27,41 @@ export default function() {
         <Cards>
           <Column size="3">
             <Card
-              img={CardArrayImg[3]}
-              alt="Chumley's"
-              category="speakeasy"
-              title="Chumley's"
-              price="60"
+              img={CardArrayImg[0]}
+              alt="Forest therapy"
+              price="29"
+              title="Forest therapy"
+              review_count="44"
             />
           </Column>
           <Column size="3">
             <Card
               img={CardArrayImg[1]}
-              alt="Hanjan"
-              category="korean gastropub"
-              title="Hanjan"
-              price="50"
+              alt="Whale whatching"
+              price="69"
+              title="Whale whatching"
+              review_count="46"
             />
           </Column>
           <Column size="3">
             <Card
               img={CardArrayImg[2]}
-              alt="Prime Meats"
-              category="german american"
-              title="Prime Meats"
-              price="55"
+              alt="Table Mountain Summit; Cable Car Down"
+              price="69"
+              title="Table Mountain Summit; Cable Car Down"
+              review_count="44"
             />
           </Column>
           <Column size="3">
             <Card
               img={CardArrayImg[3]}
-              alt="Seaprice"
-              category="fine seafood"
-              title="Seaprice"
-              price="70"
+              alt="Salsa Night"
+              price="50"
+              title="Salsa Night"
+              review_count="44"
             />
           </Column>
-          <NextBtn top="72" />
+          <NextBtn top="163" />
         </Cards>
       </Row>
     </Container>

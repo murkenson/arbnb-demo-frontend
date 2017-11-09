@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Rating from "../Rating";
 
 const Img = styled.img`
   height: ${props => (props.height ? props.height : "auto")};
@@ -15,42 +16,41 @@ const Card = styled.div`
   background: #ffffff;
 `;
 
-const Category = styled.div`
-  font-weight: bold;
-  line-height: normal;
-  margin: 8px 0px 2px;
-  font-size: 10px;
-  text-transform: uppercase;
-  color: #383838;
-`;
-
 const CardTitle = styled.div`
-  font-weight: bold;
   line-height: normal;
-  margin: 0px 0px 4px;
-  font-size: 18px;
+  margin: 8px 0px 6px;
+  font-size: 15px;
   color: #383838;
 `;
 
-const CardSubTitle = styled.div`
-  font-family: Circular;
-  margin-bottom: 6px;
+const ReviewCounter = styled.div`
+  font-family: "Circular-Air", sans-serif;
   line-height: normal;
   font-size: 12px;
   text-align: center;
-  font-size: 18px;
-  color: #383838;
-  mix-blend-mode: normal;
-  opacity: 0.9;
 `;
+
+const Reviews = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+const Price = styled.span`font-weight: bold;`;
 
 export default function(props) {
   return (
     <Card>
       <Img src={props.img} alt={props.alt} width="100%" />
-      <Category>{props.category}</Category>
-      <CardTitle>{props.title}</CardTitle>
-      <CardSubTitle>About ${props.price} per person</CardSubTitle>
+      <CardTitle>
+        <Price>${props.price}</Price> {props.title}
+      </CardTitle>
+      <Reviews>
+        <Rating>
+          <Rating />
+        </Rating>
+        <ReviewCounter>{props.review_count} reviews</ReviewCounter>
+      </Reviews>
     </Card>
   );
 }

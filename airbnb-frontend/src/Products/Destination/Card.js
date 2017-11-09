@@ -1,38 +1,55 @@
 import React from "react";
 import styled from "styled-components";
 
-const Card = styled.li`
-  flex-basis: 14.93902%;
-  display: flex;
+const Img = styled.img`
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
 `;
 
-const Img = styled.img`
-  width: 100%;
-  height: auto;
-`;
-const Link = styled.a`
-  text-decoration: none;
+const Card = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: flex-start;
-  cursor: pointer;
+  box-sizing: border-box;
+  flex-direction: column;
+  background: #ffffff;
 `;
-const Title = styled.h3`
-  flex-basis: 100%;
-  font-family: "Circular-Bold", sans-serif;
-  font-size: 15px;
-  line-height: 18px;
+
+const Category = styled.div`
+  font-weight: bold;
+  line-height: normal;
+  margin: 8px 0px 2px;
+  font-size: 10px;
+  text-transform: uppercase;
   color: #383838;
-  margin-top: 8px;
+`;
+
+const CardTitle = styled.div`
+  font-weight: bold;
+  line-height: normal;
+  margin: 0px 0px 4px;
+  font-size: 18px;
+  color: #383838;
+  font-family: "Circular-Bold", sans-serif;
+`;
+
+const CardSubTitle = styled.div`
+  font-family: Circular;
+  margin-bottom: 6px;
+  line-height: normal;
+  font-size: 12px;
+  text-align: center;
+  font-size: 18px;
+  color: #383838;
+  mix-blend-mode: normal;
+  opacity: 0.9;
 `;
 
 export default function(props) {
   return (
     <Card>
-      <Link href="">
-        <Img src={props.image} alt="Home" />
-        <Title>{props.title}</Title>
-      </Link>
+      <Img src={props.img} alt={props.alt} width="100%" />
+      <CardTitle>{props.title}</CardTitle>
     </Card>
   );
 }

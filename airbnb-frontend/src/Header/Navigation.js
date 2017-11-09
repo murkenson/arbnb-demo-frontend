@@ -3,27 +3,31 @@ import styled from "styled-components";
 
 const Link = styled.a`
   text-decoration: none;
-  font-family: CircularBook, Helvetica, sans-serif;
-  font-size: 14px;
+  box-sizing: border-box;
+  text-align: center;
   color: #383838;
 `;
-const Nav = styled.nav`
-  padding-top: 11px;
-  width: 31.12033%;
-  float: right;
+const Navigate = styled.nav`
+  color: #383838;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 400px) {
+    position: relative;
+    display: none;
+    float: auto;
+  }
 `;
 
 class Navigation extends React.Component {
   render() {
     return (
-      <Nav>
+      <Navigate>
         <Link href="#">Become a host</Link>
         <Link href="#">Help</Link>
         <Link href="#">Sign Up</Link>
         <Link href="#">Sign In</Link>
-      </Nav>
+      </Navigate>
     );
   }
 }

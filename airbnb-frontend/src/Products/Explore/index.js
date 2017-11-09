@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
+import { Column, Row, Title, Cards, Container } from "../CommonStyles";
 
 const CardArrayImg = [
   require("./img/Card1.png"),
@@ -8,24 +9,25 @@ const CardArrayImg = [
   require("./img/Card3.png")
 ];
 
-const SectionTitle = styled.h2``;
-
-const List = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  padding: 0;
-`;
-
 export default function() {
   return (
-    <section>
-      <SectionTitle>Explore Airbnb</SectionTitle>
-      <List>
-        <Card title="Home" image={CardArrayImg[0]} />
-        <Card title="Experiences" image={CardArrayImg[1]} />
-        <Card title="Restourants" image={CardArrayImg[2]} />
-      </List>
-    </section>
+    <Container>
+      <Row>
+        <Column size="12">
+          <Title>Explore Airbnb</Title>
+        </Column>
+      </Row>
+      <Row>
+        <Column size="4">
+          <Card img={CardArrayImg[0]} alt="Homes" title="Homes" />
+        </Column>
+        <Column size="4">
+          <Card img={CardArrayImg[1]} alt="Experiences" title="Experiences" />
+        </Column>
+        <Column size="4">
+          <Card img={CardArrayImg[2]} alt="Restaurants" title="Restaurants" />
+        </Column>
+      </Row>
+    </Container>
   );
 }

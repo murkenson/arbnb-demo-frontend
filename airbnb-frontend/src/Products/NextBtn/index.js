@@ -1,32 +1,41 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import NextBtn from "./NextBtn.svg";
+import NextBtn from "./next-page.svg";
 
-const NavBtn = styled.button`
+const Next = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const NextButton = styled.button`
   position: absolute;
-  top: 35%;
-  right: -10px;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background: #ffffff;
-  border: 0.5px solid rgba(72, 72, 72, 0.2);
-  box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.16);
-  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  right: 0px;
   cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  border: 1px solid rgba(72, 72, 72, 0.2);
+  border-radius: 50%;
+  background: #ffffff url(${NextBtn}) no-repeat;
+  background-position: center center;
+  background-size: auto 10px;
+  transform: scale(2, 2);
+  box-sizing: border-box;
+
+  top: ${props => (props.top ? props.top : "auto")}px;
 `;
 
-const Img = styled.img`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-30%, -50%);
-  width: 10px;
-  height: 18px;
-`;
-
-export default props => (
-  <NavBtn className={props.className}>
-    <Img src={NextBtn} alt="Next slide" />
-  </NavBtn>
-);
+export default function(props) {
+  return (
+    <Next>
+      <NextButton top={props.top} />
+    </Next>
+  );
+}
