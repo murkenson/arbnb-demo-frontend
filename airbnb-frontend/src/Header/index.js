@@ -23,9 +23,9 @@ const DropDownIcon = styled.img`
 
 const Container = styled.div`
   max-width: 1124px;
+  margin-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 16px;
 `;
 
 const Column = styled.div`

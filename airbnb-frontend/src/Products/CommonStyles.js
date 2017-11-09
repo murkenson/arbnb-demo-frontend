@@ -23,13 +23,13 @@ export const Title = styled.h2`
   font-family: "Circular-Bold", sans-serif;
 `;
 
-export const Rating = styled.div`
+export const Ratings = styled.div`
   display: flex;
   justify-content: flex-start;
 `;
-export const Row = Rating.extend`align-items: center;`;
+export const Row = Ratings.extend`align-items: center;`;
 
-export const Cards = Rating.extend`align-items: flex-start;`;
+export const Cards = Ratings.extend`align-items: flex-start;`;
 
 export const Container = styled.div`
   max-width: 1124px;

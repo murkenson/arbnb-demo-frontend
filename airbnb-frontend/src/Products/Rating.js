@@ -1,7 +1,7 @@
 import React from "react";
 import star from "./Star.svg";
 import styled from "styled-components";
-import { Rating } from "./CommonStyles";
+import { Ratings } from "./CommonStyles";
 
 const Star = styled.img`
   width: 12px;
@@ -11,12 +11,12 @@ const Star = styled.img`
 
 export default function() {
   return (
-    <Rating>
+    <Ratings>
       <Star src={star} />
       <Star src={star} />
       <Star src={star} />
       <Star src={star} />
       <Star src={star} />
-    </Rating>
+    </Ratings>
   );
 }
