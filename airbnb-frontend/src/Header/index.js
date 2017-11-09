@@ -7,13 +7,12 @@ import InputSearch from "./InputSearch";
 const Header = styled.header`
   width: 100%;
   padding: 16px 0;
-  box-shadow: 0px 1px 0px rgba(72, 72, 72, 0.3);
+  padding-left: 81px;
+  padding-right: 77px;
+  border-bottom: 1px solid rgba(72, 72, 72, 0.3);
   line-height: 24px;
 `;
-const Wrapper = styled.div`
-  width: 86.032028%;
-  margin: 0 auto;
-`;
+const Wrapper = styled.div`margin: 0 auto;`;
 
 const Logo = styled.img`
   display: inline-block;

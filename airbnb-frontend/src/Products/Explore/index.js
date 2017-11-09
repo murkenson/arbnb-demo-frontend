@@ -8,13 +8,13 @@ const CardArrayImg = [
   require("./img/Card3.png")
 ];
 
-const SectionTitle = styled.h2`padding-top: 45px;`;
+const SectionTitle = styled.h2``;
 
 const List = styled.ul`
   display: flex;
   justify-content: space-between;
-  padding: 0;
   list-style: none;
+  padding: 0;
 `;
 
 export default function() {

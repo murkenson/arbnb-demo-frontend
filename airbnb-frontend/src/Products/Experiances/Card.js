@@ -1,25 +1,46 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  Card,
-  Img,
-  Link,
-  PriceInfo,
-  Title,
-  RatingStar,
-  Review,
-  Price
-} from "./Styles";
-
 import StarIcon from "../Star.svg";
+import { PriceBold, Star } from "../CommonStyles";
 
-const Star = styled.div`
-  width: 12px;
-  height: 13px;
-  margin-right: 4px;
-  background-image: url(${StarIcon});
-  background-repeat: no-repeat;
-  background-size: cover;
+const Card = styled.li`
+  flex-basis: 23.27235%;
+  display: flex;
+`;
+const Img = styled.img`
+  width: 229px;
+  height: 346.88px;
+`;
+const Link = styled.a`
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  color: #383838;
+`;
+const PriceInfo = styled.div`
+  margin-top: 0;
+  flex-basis: 100%;
+  display: flex;
+  align-items: flex-start;
+`;
+const Title = styled.h3`
+  margin: 8px 0px 0px 8px;
+  display: inline;
+  font-size: 15px;
+  line-height: 18px;
+  font-family: "Circular-Bold", sans-serif;
+`;
+const Rating = styled.div`
+  margin-top: 7px;
+  display: flex;
+  align-items: baseline;
+`;
+const Review = styled.span`
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Circular-Light", sans-serif;
 `;
 
 export default function(props) {
@@ -28,17 +49,17 @@ export default function(props) {
       <Link href="">
         <Img src={props.image} alt="Home" />
         <PriceInfo>
-          <Price>{props.price}</Price>
+          <PriceBold>{props.price}</PriceBold>
           <Title>{props.title}</Title>
         </PriceInfo>
-        <RatingStar>
+        <Rating>
           <Star />
           <Star />
           <Star />
           <Star />
           <Star />
           <Review>{props.review}</Review>
-        </RatingStar>
+        </Rating>
       </Link>
     </Card>
   );

@@ -23,6 +23,7 @@ const SectionTitle = styled.h2`
   line-height: 34px;
   color: #383838;
 `;
+
 export default function() {
   return (
     <section>
@@ -30,24 +31,24 @@ export default function() {
       <SeeAllBtn />
       <List>
         <Card
-          title="La Salentina, see, nature, relax"
           image={CardArrayImg[0]}
+          title="La Salentina, see, nature, relax"
           price="82$"
           type="Entire house"
           amount="9 beds"
           review="91 Superhost"
         />
         <Card
-          title="Your private 3 bedr. riad exclusiv.."
           image={CardArrayImg[1]}
+          title="Your private 3 bedr. riad exclusiv.."
           price="82$"
           type="Entire house"
           amount="5 beds"
           review="161 Superhost"
         />
         <Card
-          title="Dreamy Tropical Tree House"
           image={CardArrayImg[2]}
+          title="Dreamy Tropical Tree House"
           price="200$"
           type="Entire treehouse"
           amount="1 bed"

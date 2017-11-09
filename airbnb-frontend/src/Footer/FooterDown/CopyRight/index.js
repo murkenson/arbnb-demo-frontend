@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import FooterLogo from "./img/logo.svg";
+import FooterLogo from "./FooterLogo.svg";
 
-const FooterLogo = styled.a`
+const FooterLogoSection = styled.a`
   display: block;
   position: relative;
   padding-left: 32px;
@@ -27,10 +27,10 @@ const Desc = styled.span`
 `;
 
 export default () => (
-  <FooterLogo href="#">
+  <FooterLogoSection href="#">
     <FooterLogoContainer>
       <img src={FooterLogo} alt="Airbnb" />
     </FooterLogoContainer>
     <Desc>© Airbnb Inc.</Desc>
-  </FooterLogo>
+  </FooterLogoSection>
 );

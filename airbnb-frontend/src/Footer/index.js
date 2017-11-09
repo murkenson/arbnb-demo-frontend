@@ -1,17 +1,18 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import ArrownDown from "./ArrownDown.png";
+import FooterDown from "./FooterDown";
 
 const Footer = styled.footer`
   width: 100%;
-  padding: 48px;
-  box-shadow: 0px 0.5px 0px rgba(72, 72, 72, 0.3);
+  padding: 48px 0;
+  padding-left: 81px;
+  padding-right: 77px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(72, 72, 72, 0.3);
   line-height: 24px;
 `;
-const Wrapper = styled.div`
-  width: 86.032028%;
-  margin: 0 auto;
-`;
+const Wrapper = styled.div`margin: 0 auto;`;
 const FooterWrapper = Wrapper.extend`
   display: flex;
   justify-content: space-between;
@@ -141,6 +142,7 @@ export default function() {
           </Col1>
         </NavLinks>
       </FooterWrapper>
+      <FooterDown />
     </Footer>
   );
 }

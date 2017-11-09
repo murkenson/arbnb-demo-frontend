@@ -1,44 +1,75 @@
 import React from "react";
 import styled from "styled-components";
-import { Img, Link, PriceInfo, Title, Ratio, Review } from "./Styles";
-import { Card } from "./Styles";
 import StarIcon from "../Star.svg";
+import { PriceBold, Star } from "../CommonStyles";
 
-const Price = styled.span`
-  margin-top: 8px;
-  font-family: "Circular-Light", sans-serif;
-  font-size: 15px;
-  line-height: 18px;
-  color: #383838;
+const Wrapper = styled.div`
+  width: 86.032028%;
+  margin: 0 auto;
 `;
 
-const Star = styled.div`
-  width: 12px;
-  height: 13px;
-  margin-right: 4px;
-  background-image: url(${StarIcon});
-  background-repeat: no-repeat;
-  background-size: cover;
+const CardLi = styled.li`
+  flex-basis: 31.504%;
+  display: flex;
+`;
+const Img = styled.img`
+  width: 310px;
+  height: 204px;
+`;
+const WrapLink = styled.a`
+  text-decoration: none;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  color: #383838;
+`;
+const PriceInfo = styled.div`
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+`;
+const Title = styled.h3`
+  margin: 8px 0px 0px 8px;
+  display: inline;
+  font-family: "Circular-Light", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+`;
+
+const Rating = styled.div`
+  display: flex;
+  margin-top: 6px;
+`;
+
+const Review = styled.span`
+  margin-top: 2px;
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: "Circular-Light", sans-serif;
 `;
 
 export default function(props) {
   return (
-    <Card>
-      <Link href="">
-        <Img src={props.image} alt="Home" />
-        <PriceInfo>
-          <Price>{props.price}</Price>
-          <Title>{props.title}</Title>
-        </PriceInfo>
-        <Ratio>
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Star />
-          <Review>{props.review}</Review>
-        </Ratio>
-      </Link>
-    </Card>
+    <Wrapper>
+      <CardLi>
+        <WrapLink href="">
+          <Img src={props.image} alt="Home" />
+          <PriceInfo>
+            <PriceBold>{props.price}</PriceBold>
+            <Title>{props.title}</Title>
+          </PriceInfo>
+          <Rating>
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Star />
+            <Review>{props.review}</Review>
+          </Rating>
+        </WrapLink>
+      </CardLi>
+    </Wrapper>
   );
 }

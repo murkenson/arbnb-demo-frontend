@@ -6,7 +6,7 @@ import Homes from "./Homes/";
 import PopReservation from "./PopReservation/";
 import Destination from "./Destination/";
 
-const AppMain = styled.main`
+const Main = styled.main`
   position: relative;
   width: 100%;
   height: auto;
@@ -14,16 +14,17 @@ const AppMain = styled.main`
   padding-right: 77px;
   font-size: 32px;
   line-height: 34px;
+  padding-bottom: 64px;
 `;
 
 export default function() {
   return (
-    <AppMain>
+    <Main>
       <Explore />
       <Experiances />
       <Homes />
       <PopReservation />
       <Destination />
-    </AppMain>
+    </Main>
   );
 }

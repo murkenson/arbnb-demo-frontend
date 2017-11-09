@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Card from "./Card";
 import SeeAllBtn from "../SeeAllBtn";
-import NextBtn from "../NextBtn";
 
 const CardArrayImg = [
   require("./img/Card1.png"),
@@ -11,6 +10,8 @@ const CardArrayImg = [
   require("./img/Card3.png")
 ];
 
+const SectionTitle = styled.h2`padding-top: 48px;`;
+
 const List = styled.ul`
   display: flex;
   justify-content: space-between;
@@ -18,18 +19,10 @@ const List = styled.ul`
   padding: 0;
 `;
 
-const SectionTitle = styled.h2`
-  margin-top: 48px;
-  font-family: CircularBold, Helvetica, sans-serif;
-  font-size: 32px;
-  line-height: 34px;
-  color: #383838;
-`;
-
 export default function() {
   return (
     <section>
-      <SectionTitle>Experiences</SectionTitle> <NextBtn />
+      <SectionTitle>Experiences</SectionTitle>
       <SeeAllBtn />
       <List>
         <Card
