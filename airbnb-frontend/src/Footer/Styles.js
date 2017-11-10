@@ -22,9 +22,6 @@ export const Column = styled.div`
   box-sizing: border-box;
   padding: 0px 8px;
   flex-basis: ${props => (props.size ? props.size / 12 * 100 : "8.33333333")}%;
-  @media screen and (max-width: 400px) {
-    display: none;
-  }
 `;
 
 export const Row = styled.div`
@@ -44,9 +41,9 @@ export const Link = styled.a`
 `;
 
 export const Title = styled.h3`
-  margin-top: 0;
+  font-weight: bold;
   font-size: 15px;
-  line-height: 18px;
+  margin-bottom: 16px;
   color: #383838;
   font-family: "Circular-Bold", sans-serif;
   @media screen and (max-width: 400px) {

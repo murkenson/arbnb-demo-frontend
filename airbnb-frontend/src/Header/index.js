@@ -16,8 +16,9 @@ const DropDownIcon = styled.img`
   position: relative;
   margin-bottom: 11px;
   cursor: pointer;
-  @media screen and (min-width: 768px) {
-    display: none;
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: inline-flex;
   }
 `;
 
@@ -32,7 +33,11 @@ const Column = styled.div`
   box-sizing: border-box;
   padding: 0px 8px;
   flex-basis: ${props => (props.size ? props.size / 12 * 100 : "8.33333333")}%;
+  @media screen (max-width: 758px) {
+    flex-basis: 33%;
+  }
 `;
+
 const Offset = styled(Column)``;
 
 const Row = styled.div`

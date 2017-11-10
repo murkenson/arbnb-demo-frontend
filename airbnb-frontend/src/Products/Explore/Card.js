@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { CardTitles } from "../CommonStyles";
+import { CardTitles, Row } from "../CommonStyles";
 
 const Img = styled.img`
   height: 72px;
@@ -10,11 +10,8 @@ const Img = styled.img`
     width: 144px;
   }
 `;
-const Card = styled.div`
-  display: flex;
+const Card = Row.extend`
   background: #ffffff;
-  justify-content: flex-start;
-  align-items: center;
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);

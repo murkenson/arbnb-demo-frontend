@@ -12,7 +12,7 @@ const Navigate = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
     position: relative;
     display: none;
     float: auto;

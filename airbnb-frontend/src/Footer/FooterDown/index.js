@@ -12,6 +12,10 @@ const FooterDown = styled.section`
   min-height: 88px;
   margin-top: 48px;
   border-top: 1px solid rgba(72, 72, 72, 0.3);
+  @media (max-width: 400px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
 `;
 
 const Container = styled.div`
