@@ -57,7 +57,6 @@ export const Title = styled.h3`
 export const DropDown = styled.div`
   position: relative;
   margin-bottom: 16px;
-  background: #ffffff;
   border: 1px solid rgba(72, 72, 72, 0.2);
   border-radius: 4px;
   &::after {

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { CardTitles } from "../CommonStyles";
 
 const Img = styled.img`
   height: 72px;
@@ -9,28 +10,23 @@ const Img = styled.img`
     width: 144px;
   }
 `;
-
 const Card = styled.div`
   display: flex;
+  background: #ffffff;
   justify-content: flex-start;
   align-items: center;
-  background: #ffffff;
   border: 1px solid rgba(72, 72, 72, 0.2);
   box-sizing: border-box;
   box-shadow: 0px 2px 4px rgba(72, 72, 72, 0.08);
   border-radius: 4px;
 `;
-
-const CardTitle = styled.p`
+const CardTitle = CardTitles.extend`
   padding-left: 24px;
-  font-family: Circular;
-  line-height: normal;
+  font-family: "Circular-Bold", sans-serif;
   font-size: 17px;
-  font-weight: bold;
-  color: #383838;
 `;
 
-const Pic = styled(Img)`
+const CardImg = styled(Img)`
   border-radius: 3px 0px 0px 3px;
   margin: -1px;
 `;
@@ -38,7 +34,7 @@ const Pic = styled(Img)`
 export default function(props) {
   return (
     <Card>
-      <Pic src={props.img} alt={props.alt} />
+      <CardImg src={props.img} alt={props.alt} />
       <CardTitle>{props.title}</CardTitle>
     </Card>
   );

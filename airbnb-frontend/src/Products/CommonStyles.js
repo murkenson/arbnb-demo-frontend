@@ -37,5 +37,30 @@ export const Container = styled.div`
   margin-right: auto;
   margin-bottom: 16px;
 `;
+export const CardTitles = styled.p`
+  line-height: normal;
+  font-weight: bold;
+  color: #383838;
+`;
+
+export const CardImg = styled.img`
+  height: ${props => (props.height ? props.height : "auto")};
+  width: ${props => (props.width ? props.width : "auto")};
+`;
+
+export const Card = Cards.extend`
+  box-sizing: border-box;
+  flex-direction: column;
+  background: #ffffff;
+`;
+
+export const Category = styled.div`
+  font-weight: bold;
+  line-height: normal;
+  margin: 8px 0px 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #383838;
+`;
 
 export default function() {}
