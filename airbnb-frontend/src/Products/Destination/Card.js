@@ -6,6 +6,11 @@ const CardTitle = CardTitles.extend`
   margin: 0px 0px 4px;
   font-size: 18px;
   font-family: "Circular-Bold", sans-serif;
+  line-height: 18px;
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+    line-height: 14px;
+  }
 `;
 
 export default function(props) {

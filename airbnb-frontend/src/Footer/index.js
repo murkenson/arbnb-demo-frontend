@@ -26,7 +26,7 @@ export default function() {
               <option value="eng">English</option>
               <option value="rus">Russian</option>
               <option value="isp">Ispanion</option>
-              <option value="grm">German</option>
+              <option value="gem">German</option>
             </DropDownSelect>
           </DropDown>
           <DropDown>
@@ -50,6 +50,7 @@ export default function() {
         <Column size="1" />
         <Column size="2">
           <Title>Discover</Title>
+
           <Link href="#">Trust &amp; Safety</Link>
           <Link href="#">Travel Credit</Link>
           <Link href="#">Gift Cards</Link>

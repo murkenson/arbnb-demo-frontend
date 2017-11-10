@@ -21,6 +21,9 @@ export const Title = styled.h2`
   font-size: 32px;
   color: #383838;
   font-family: "Circular-Bold", sans-serif;
+  @media screen and (max-width: 400px) {
+    font-size: 24px;
+  }
 `;
 
 export const Ratings = styled.div`

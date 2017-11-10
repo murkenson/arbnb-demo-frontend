@@ -25,7 +25,12 @@ const SearchInput = styled.input`
   padding-left: 54px;
   outline: none;
   background: url(${SearchIcon}) 16px center no-repeat;
-  @media (max-width: 400px) {
+  @media (max-width: 768px) {
+    padding-left: 49px;
+  }
+  @media (max-width: 986px) {
+    padding-left: 53px;
+    background-position: 15.2px 12.2px;
   }
 `;
 

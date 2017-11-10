@@ -35,6 +35,7 @@ export const Link = styled.a`
   text-decoration: none;
   font-size: 0.75rem;
   color: #636363;
+  margin-top: 8px;
   @media screen and (max-width: 400px) {
     display: none;
   }

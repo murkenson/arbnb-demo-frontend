@@ -33,7 +33,7 @@ const Column = styled.div`
   box-sizing: border-box;
   padding: 0px 8px;
   flex-basis: ${props => (props.size ? props.size / 12 * 100 : "8.33333333")}%;
-  @media screen (max-width: 758px) {
+  @media screen (max-width: 767px) {
     flex-basis: 33%;
   }
 `;

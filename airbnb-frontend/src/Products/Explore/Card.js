@@ -5,10 +5,6 @@ import { CardTitles, Row } from "../CommonStyles";
 const Img = styled.img`
   height: 72px;
   width: 96px;
-  @media (max-width: 400px) {
-    height: 78px;
-    width: 144px;
-  }
 `;
 const Card = Row.extend`
   background: #ffffff;
@@ -26,6 +22,13 @@ const CardTitle = CardTitles.extend`
 const CardImg = styled(Img)`
   border-radius: 3px 0px 0px 3px;
   margin: -1px;
+  @media (max-width: 768px) {
+    width: 96px;
+    height: 72px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-top-right-radius: 0;
+  }
 `;
 
 export default function(props) {
