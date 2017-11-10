@@ -14,7 +14,7 @@ export const Column = styled.div`
   box-sizing: border-box;
   padding: 0px 8px;
   flex-basis: ${props => (props.size ? props.size / 12 * 100 : "8.33333333")}%;
-  `;
+`;
 
 export const Title = styled.h2`
   line-height: 34px;
